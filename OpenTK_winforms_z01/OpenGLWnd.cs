@@ -1,35 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using OpenTK.Graphics.OpenGL;
+using OpenTK;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using OpenTK.Platform;
-using OpenTK.Graphics.OpenGL;
-using OpenTK;
 
-/**
-    Aplicația utilizează biblioteca OpenTK v2.0.0 (stable) oficială și OpenTK. GLControl v2.0.0
-    (unstable) neoficială. Aplicația fiind scrisă în modul GUI (WinForms) vom utiliza controlul WinForms
-    oferit de OpenTK, pe acre îl vom importa in Toolbox! Acest lucru se poate face doar dacă copiem
-    local packetul OpenTK.GLControl.dll oferit de NuGet, apoi îl aducem ca referință în Toolbox.
-    Tipul de ferestră utilizat: FORM. Se demmonstrează modul imediat de randare (vezi comentariu!)...
-**/
-namespace OpenTK_winforms_z01 {
-    public partial class OpenGLWnd : Form {
+namespace OpenTK_winforms_z01 
+{
+    public partial class OpenGLWnd : Form 
+    {
 
-        /// <summary>
-        /// Constante utilizate în aplicație.
-        /// </summary>
         private const int XYZ_SIZE = 75;
 
-        /// <summary>
-        /// Variabile de stare pentru partea de interacțiune/randare 3D.
-        /// </summary>
+        // Variabile de stare pentru partea de interacțiune/randare 3D.
         private int eyePosX = 100;
         private int eyePosY = 100;
         private int eyePosZ = 50;
