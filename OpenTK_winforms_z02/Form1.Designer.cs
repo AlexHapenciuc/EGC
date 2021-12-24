@@ -78,6 +78,9 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.btnLightsNo = new System.Windows.Forms.Button();
+            this.btnLight1 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericXeye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericYeye)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericZeye)).BeginInit();
@@ -99,13 +102,14 @@
             // GlControl1
             // 
             this.GlControl1.BackColor = System.Drawing.Color.Black;
-            this.GlControl1.Location = new System.Drawing.Point(13, 13);
+            this.GlControl1.Location = new System.Drawing.Point(13, 47);
             this.GlControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GlControl1.Name = "GlControl1";
-            this.GlControl1.Size = new System.Drawing.Size(881, 776);
+            this.GlControl1.Size = new System.Drawing.Size(881, 742);
             this.GlControl1.TabIndex = 0;
             this.GlControl1.VSync = false;
             this.GlControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.GlControl1_Paint);
+            this.GlControl1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GlControl1_KeyDown);
             this.GlControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GlControl1_MouseDown);
             this.GlControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GlControl1_MouseMove);
             this.GlControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GlControl1_MouseUp);
@@ -299,18 +303,18 @@
             // 
             // btnLight0
             // 
-            this.btnLight0.Location = new System.Drawing.Point(1027, 375);
+            this.btnLight0.Location = new System.Drawing.Point(1017, 375);
             this.btnLight0.Name = "btnLight0";
-            this.btnLight0.Size = new System.Drawing.Size(135, 34);
+            this.btnLight0.Size = new System.Drawing.Size(96, 34);
             this.btnLight0.TabIndex = 26;
             this.btnLight0.UseVisualStyleBackColor = true;
             this.btnLight0.Click += new System.EventHandler(this.btnLight0_Click);
             // 
             // btnLight0Reset
             // 
-            this.btnLight0Reset.Location = new System.Drawing.Point(1168, 375);
+            this.btnLight0Reset.Location = new System.Drawing.Point(1227, 375);
             this.btnLight0Reset.Name = "btnLight0Reset";
-            this.btnLight0Reset.Size = new System.Drawing.Size(137, 34);
+            this.btnLight0Reset.Size = new System.Drawing.Size(78, 34);
             this.btnLight0Reset.TabIndex = 27;
             this.btnLight0Reset.Text = "Reset";
             this.btnLight0Reset.UseVisualStyleBackColor = true;
@@ -683,11 +687,41 @@
             this.btnLightsNo.UseVisualStyleBackColor = true;
             this.btnLightsNo.Click += new System.EventHandler(this.btnLightsNo_Click);
             // 
+            // btnLight1
+            // 
+            this.btnLight1.Location = new System.Drawing.Point(1124, 375);
+            this.btnLight1.Name = "btnLight1";
+            this.btnLight1.Size = new System.Drawing.Size(97, 34);
+            this.btnLight1.TabIndex = 57;
+            this.btnLight1.UseVisualStyleBackColor = true;
+            this.btnLight1.Click += new System.EventHandler(this.btnLight1_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(12, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(642, 17);
+            this.label24.TabIndex = 58;
+            this.label24.Text = "Light \"Sursa 1\" controls: W, S (OZ), A, D (OX), Q, R (OY) ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(12, 26);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(489, 17);
+            this.label25.TabIndex = 59;
+            this.label25.Text = "or by holding mouse left click and dragging";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1317, 802);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.btnLight1);
             this.Controls.Add(this.btnLightsNo);
             this.Controls.Add(this.numericLight0Specular_Blue);
             this.Controls.Add(this.numericLight0Specular_Green);
@@ -814,6 +848,9 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btnLightsNo;
+        private System.Windows.Forms.Button btnLight1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
     }
 }
 
